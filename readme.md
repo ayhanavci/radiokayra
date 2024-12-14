@@ -81,7 +81,8 @@ You can click radio icon and click any channel to play. But you can also search 
     1. Icon names used and various size constants are in ```constants.js```
     2. yt-dlp commands are in ```ytdlphandler.js```
     3. Every sub-panel has a seperate class and is in ```popups.js```
-    4. Search functionalities are in ```searchradio.js```, ```searchyoutube.js``` and gnome search is in ```searchProvider.js```
+    4. GStreamer related code is only inside ```radiokayra.js```
+    5. Search functionalities are in ```searchradio.js```, ```searchyoutube.js``` and gnome search is in ```searchProvider.js```
 
 * I will probably add MPV support as an alternative to GStreamer in the future.
 * Code checked with [eslint](https://eslint.org/)  
