@@ -1,0 +1,16 @@
+[
+  {
+    "id": "bfaea783-5d7b-4ef5-9e79-c8a61fa8f67e",
+    "name": "lofi hip hop radio 📚 beats to relax/study to",
+    "order": 0,
+    "useYtdlp": true,
+    "uri": "https://www.youtube.com/watch?v=jfKfPfyJRdk"
+  },
+  {
+    "id": "gfaea783-5d7b-4ef5-9e79-c8a61fa8f67a",
+    "name": "Blade Runner Radio",
+    "order": 1,
+    "useYtdlp": true,
+    "uri": "https://www.youtube.com/watch?v=RrkrdYm3HPQ"
+  }
+]

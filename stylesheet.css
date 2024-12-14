@@ -1,0 +1,53 @@
+radio-indicator-hbox {
+    width: 150px;
+}
+
+history-menu-section {
+    height: 50px;
+    max-height: 50px;
+}
+
+main-menu-section StButton.ci-pin-btn {
+    max-height: 50px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.controls-box-width {
+    width: 300px;
+}
+
+.play-button-icon {
+    
+}
+
+.channel-icon {
+    padding-right: 5px;
+}
+
+.download-button-ico {
+    padding-left: 2px;
+}
+
+.channel-name-label {
+    padding:5px,
+}
+.adw-action-row.row {
+    width: 100%;
+}
+
+.channel-list-item {
+    padding-right:5px
+}
+
+.settings-menu-item {
+}
+
+.radiokayra-popup-loading-box {
+
+}
+
+.label-channels-header {
+}
+.channel-manage-box {
+    right: 0px;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.radiokayra" path="/org/gnome/shell/extensions/radiokayra/">
+    <key name="channelschangedevent" type="s">
+      <default>""</default>
+      <summary>Channel Event</summary>
+      <description>Used Internally to update list</description>
+    </key>
+    <key name="lastplayed" type="s">
+      <default>""</default>
+      <summary>Last Played Channel</summary>
+      <description></description>
+    </key>
+    <key name="volumelevel" type="d">
+      <default>0.5</default>
+      <summary>Volume Level</summary>
+      <description></description>
+    </key>
+  </schema>
+</schemalist>

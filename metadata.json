@@ -1,0 +1,9 @@
+{
+  "uuid": "radiokayra@dokaton.com",
+  "name": "Radio Kayra",
+  "description": "A tray radio with yt-dlp support",
+  "shell-version": ["45", "46", "47"],
+  "settings-schema": "org.gnome.shell.extensions.radiokayra",
+  "url": "https://github.com/ayhanavci/radiokayra",
+  "gettext-domain": "radiokayra@dokaton.com"
+}

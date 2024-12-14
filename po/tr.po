@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-04 16:24+0300\n"
+"PO-Revision-Date: 2024-12-04 16:30+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: extension.js:130
+msgid "Edit Channels"
+msgstr "Kanalları Düzenle"
+
+#: popups.js:142
+msgid "Playing..."
+msgstr "Çalıyor..."
+
+#: popups.js:148
+msgid "Loading..."
+msgstr "Yüklüyor..."
+
+#: popups.js:154
+msgid "Ready..."
+msgstr "Hazır..."
+
+#: prefs.js:47
+msgid "Add / Edit and Delete radio stations."
+msgstr "Radyo kanallarını ekle / düzenle veya sil."
+
+#: prefs.js:55
+msgid "Radio Channels"
+msgstr "Radyo kanalları"
+
+#: prefs.js:201
+msgid "Add a New Channel"
+msgstr "Yeni Kanal"
+
+#: prefs.js:201
+msgid "Edit Channel"
+msgstr "Kanal düzenle"
+
+#: prefs.js:219
+msgid "Channel URL:"
+msgstr "Kanal bağlantısı:"
+
+#: prefs.js:243
+msgid "Channel Name:"
+msgstr "Kanal adı:"
+
+#: prefs.js:253
+msgid "Fetch from url"
+msgstr "Bağlantıdan oku"
+
+#: prefs.js:275
+msgid "Use yt-dlp?"
+msgstr "yt-dlp kullanılsın mı?  "
+
+#: prefs.js:277
+msgid "Add"
+msgstr "Ekle"
+
+#: prefs.js:277
+msgid "Update"
+msgstr "Güncelle"
+
+#: searchradio.js:24
+msgid "Radio Search"
+msgstr "Radyo ara"
+
+#: searchradio.js:29 searchradio.js:39 searchyoutube.js:27 searchyoutube.js:37
+msgid "Search"
+msgstr "Ara"
+
+#: searchradio.js:33
+msgid "Channel name"
+msgstr "Kanal adı"
+
+#: searchradio.js:63 searchyoutube.js:63
+msgid "Search Results"
+msgstr "Arama sonuçları"
+
+#: searchradio.js:125
+msgid "Country: "
+msgstr "Ülke: "
+
+#: searchradio.js:126
+msgid "Tags: "
+msgstr "Etiketler: "
+
+#: searchradio.js:127 searchyoutube.js:94
+msgid "Link: "
+msgstr "Bağlantı: "
+
+#: searchradio.js:128
+msgid "Codec: "
+msgstr "Kodek: "
+
+#: searchradio.js:129
+msgid "Bitrate: "
+msgstr "Bitrate: "
+
+#: searchyoutube.js:22
+msgid "Youtube Search"
+msgstr "Youtube'da Ara"
+
+#: searchyoutube.js:31
+msgid "Video name"
+msgstr "Video adı"
+
+#: searchyoutube.js:93
+msgid "Likes: "
+msgstr "Beğeniler: "
+
+#: searchyoutube.js:95
+msgid "Is Live: "
+msgstr "Canlı mı "
+
+#: searchyoutube.js:96
+msgid "Duration: "
+msgstr "Süre "
