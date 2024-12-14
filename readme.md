@@ -55,7 +55,7 @@ Select "Radio Search" on the top, type your search phrase and click enter or sea
 To add a search result. Just click the + button next to it. This will add the channel name, url and the thumbnail to your stations.
 
 ## Gnome Search
-You can select to play your channels by clicking the radio icon and selecting the channel. But you can also search through your channels using integrated Gnome shell search feature. Clicking any of the search results starts playing the channel.
+You can click radio icon and click any channel to play. But you can also search through your channels using integrated Gnome shell search feature. Clicking any of the search results starts playing the channel.
 
 <img src="./.readme/gnome_search.png" alt="Alt Text" width="100%" height="100%"> 
 
