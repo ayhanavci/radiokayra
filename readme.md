@@ -2,7 +2,7 @@
 
 Radio Kayra is a free and open source [Gnome](https://www.gnome.org/) desktop extension that plays your favorite music and podcast streams in the background. 
 
-It utilizes yt-dlp and gstreamer for url/thumbnail resolving and audio playback respectively.
+It utilizes [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [GStreamer](https://gstreamer.freedesktop.org/) for url/thumbnail resolving and audio playback respectively.
 
 <img src="./.readme/radiokayra.png" alt="Alt Text" width="40%" height="40%">
 
