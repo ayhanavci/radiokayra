@@ -22,7 +22,7 @@ export default class RadioKayraExtension extends Extension {
     this._provider = null;
     this.menuButton?.destroy();
     this.menuButton = null;
-  }  
+  }    
 }
 
 //Code blob to make gio subprocesses work. Recommended in gnome matrix chat.
