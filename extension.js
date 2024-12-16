@@ -22,11 +22,10 @@ export default class RadioKayraExtension extends Extension {
     this._provider = null;
     this.menuButton?.destroy();
     this.menuButton = null;
-  }
-  //Code blob to make gio subprocesses work. Recommended in gnome matrix chat.
-  
+  }  
 }
 
+//Code blob to make gio subprocesses work. Recommended in gnome matrix chat.
 /* Gio.Subprocess */
 Gio._promisify(Gio.Subprocess.prototype, "communicate_async");
 Gio._promisify(Gio.Subprocess.prototype, "communicate_utf8_async");
