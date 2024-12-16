@@ -137,12 +137,11 @@ export const RadiokayraMenuButton = GObject.registerClass(
         this._scrollViewMenuSection.actor.add_child(this._channelScrollView);
         this.menu.addMenuItem(this._scrollViewMenuSection);
         this.addChannels();
-        if (this._activeChannel == null) {
-            if (this.channelBoxList != null && this.channelBoxList.length > 0) {
-                this._activeChannel = this.channelBoxList[0];
-            }            
 
-        }
+        //If there is no previously played channel, pick the first one on the list (if any)
+        if (this._activeChannel == null && this.channelBoxList != null && this.channelBoxList.length > 0) 
+            this._activeChannel = this.channelBoxList[0];
+        
         
         //Channels Section END
         this._controlsPopup.setOnPlayClicked(this.onPlayClicked);
