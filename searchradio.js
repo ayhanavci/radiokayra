@@ -192,11 +192,10 @@ export const SearchRadioPageHandler = class ChannelInfo {
 
         //TODO: UPDATE IF ALREADY EXISTS
 
-        if (!this._kayraPrefs.channelExists(encodedUri)) { //new channel, new uri  
+        if (!this._kayraPrefs._stationsPageHandler.channelExists(encodedUri)) { //new channel, new uri  
             if (channel.favicon && !channel.favicon.endsWith('/'))
                 Utils.saveThumbnail(channel.favicon, Utils.getConfigPath() + "/" + id);
-            this._kayraPrefs.addChannelInfo(id, encodedName, encodedUri, false);
+            this._kayraPrefs._stationsPageHandler.addChannelInfo(id, encodedName, encodedUri, false);
         }
-
     }
 }

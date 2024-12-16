@@ -74,6 +74,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
         this._kayraExtension = extension;                
         this._settings = extension.getSettings();
         this._path = extension.path;        
+        this._activeChannel = null;
         
         let volume = this._settings.get_double(Constants.SCHEMA_VOLUME_LEVEL);
         this._player = new RadioKayra.RadioPlayer(volume);
@@ -136,6 +137,12 @@ export const RadiokayraMenuButton = GObject.registerClass(
         this._scrollViewMenuSection.actor.add_child(this._channelScrollView);
         this.menu.addMenuItem(this._scrollViewMenuSection);
         this.addChannels();
+        if (this._activeChannel == null) {
+            if (this.channelBoxList != null && this.channelBoxList.length > 0) {
+                this._activeChannel = this.channelBoxList[0];
+            }            
+
+        }
         
         //Channels Section END
         this._controlsPopup.setOnPlayClicked(this.onPlayClicked);
@@ -203,6 +210,10 @@ export const RadiokayraMenuButton = GObject.registerClass(
         this._player.setOnTagChanged((artist, title) => { this.onPlayerTagChanged(artist, title); });
       }
       onPlayerStreamStarted() {      
+        if (radiokayraPanel._activeChannel == null) {
+            console.warn("Active Channel is null. This shouldn't happen.")
+            return;
+        }
         radiokayraPanel.setTrayIconPlaying();
         radiokayraPanel._loadingInfoPopup.statePlaying();
         radiokayraPanel._controlsPopup.statePlaying();
@@ -217,9 +228,10 @@ export const RadiokayraMenuButton = GObject.registerClass(
       onPlayerError(type, message) { console.warn(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_PLAYER_ERROR} [${type}] [${message}]`); }
       onPlayerTagChanged(artist, title) { radiokayraPanel._streamInfoPopup.onNewTag(artist, title); }      
       onChannelChanged(channel) {            
-        console.info(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNEL_CHANGED}:[${radiokayraPanel._activeChannel._channelInfo.getId()}] -> [${channel._channelInfo.getId()}]`);
+        if (radiokayraPanel._activeChannel == null) console.info(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNEL_CHANGED}:[] -> [${channel._channelInfo.getId()}]`);            
+        else console.info(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNEL_CHANGED}:[${radiokayraPanel._activeChannel._channelInfo.getId()}] -> [${channel._channelInfo.getId()}]`);            
         radiokayraPanel._activeChannel = channel;
-        radiokayraPanel.lastClickedChannelId = radiokayraPanel._activeChannel._channelInfo.getId();
+        radiokayraPanel._lastClickedChannelId = radiokayraPanel._activeChannel._channelInfo.getId();
         
         if (radiokayraPanel._player.isPlaying()) this._player.stop();
         
@@ -248,7 +260,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
         }
       }           
       onShortChannelJsonSuccess(channelBox, jsonData) {      
-        if (!Utils.isEmptyString(radiokayraPanel.lastClickedChannelId) && channelBox._channelInfo.getId() !== radiokayraPanel.lastClickedChannelId) 
+        if (!Utils.isEmptyString(radiokayraPanel._lastClickedChannelId) && channelBox._channelInfo.getId() !== radiokayraPanel._lastClickedChannelId) 
           return; //User clicked another channel before yt-dlp returned. Don't do anything!
         console.info(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_PROCESSED_URL_SUCCESS}:[${jsonData.url}]`);            
         radiokayraPanel._activeChannel.setResolvedUrl(jsonData.url);

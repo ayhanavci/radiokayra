@@ -8,6 +8,7 @@ import * as Constants from "./constants.js";
 
 import { ExtensionPreferences, gettext as _, } from "resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js";
 
+//glib-compile-schemas schemas/
 export default class RadioKayraPreferences extends ExtensionPreferences {
   constructor(metadata) {
     super(metadata);

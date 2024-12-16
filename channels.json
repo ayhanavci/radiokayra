@@ -7,10 +7,24 @@
     "uri": "https://www.youtube.com/watch?v=jfKfPfyJRdk"
   },
   {
-    "id": "gfaea783-5d7b-4ef5-9e79-c8a61fa8f67a",
-    "name": "Blade Runner Radio",
-    "order": 1,
-    "useYtdlp": true,
-    "uri": "https://www.youtube.com/watch?v=RrkrdYm3HPQ"
+      "id": "8e7cd4cb-1170-4727-98a9-25d60f57e50f",
+      "name": "Chopin - Nocturne op.9 No.2",
+      "order": 1,
+      "useYtdlp": true,
+      "uri": "https://www.youtube.com/watch?v=9E6b3swbnWg"
+  },
+  {
+      "id": "68b8c1cb-c5ab-4a1f-b673-71fe62c8375b",
+      "name": "The Best of Mozart",
+      "order": 2,
+      "useYtdlp": true,
+      "uri": "https://www.youtube.com/watch?v=Rb0UmrCXxVA"
+  },
+  {
+      "id": "a66ba0e4-a3b4-42ed-9a72-46d9a1e1ff70",
+      "name": "Heavy Rain Sounds recommended for those who want a good Night&apos;s Sleep - Best White Noise",
+      "order": 3,
+      "useYtdlp": true,
+      "uri": "https://www.youtube.com/watch?v=lzWsN2T1ceo"
   }
 ]

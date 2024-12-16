@@ -136,9 +136,9 @@ export const SearchYoutubePageHandler = class ChannelInfo {
         let id = Utils.uuidv4();                        
         
         //TODO: UPDATE IF ALREADY EXISTS
-        if (!this.kayraPrefs.channelExists(encodedUri)) { //new channel, new uri  
+        if (!this.kayraPrefs._stationsPageHandler.channelExists(encodedUri)) { //new channel, new uri  
             Utils.saveThumbnail(youtubeVideoData.thumbnail, Utils.getConfigPath() + "/" + id);
-            this.kayraPrefs.addChannelInfo(id, encodedName, encodedUri, true);
+            this.kayraPrefs._stationsPageHandler.addChannelInfo(id, encodedName, encodedUri, true);
         }        
         
     }
