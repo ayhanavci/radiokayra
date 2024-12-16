@@ -9,7 +9,7 @@ export async function getShortChannelJson(channelBox, clientObject) {
       ["yt-dlp", "-x", "-O", "{\"url\":\"%(urls)s\", \"thumbnail\":\"%(thumbnail)s\", \"is_live\":\"%(is_live)s\", \"duration\":\"%(duration_string)s\"}", channelBox._channelInfo.uri],
       Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE,
     );
-
+    console.error(`URI: [${channelBox._channelInfo.uri}]`);
     const [stdout, stderr] = await proc.communicate_utf8_async(null, null);
     
     if (proc.get_successful()) {
@@ -30,7 +30,7 @@ export async function getFullChannelJson(id, uri, clientObject) {
   try {
     //yt-dlp --dump-single-json --flat-playlist URI
     const proc = Gio.Subprocess.new(
-      ["yt-dlpa", "--dump-single-json", "--flat-playlist", uri],
+      ["yt-dlp", "--dump-single-json", "--flat-playlist", uri],
       Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE,
     );
 

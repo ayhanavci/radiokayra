@@ -87,9 +87,9 @@ export const VolumeControlPopup = GObject.registerClass(
             this.setVolumeIcon(this._volume);
         }
         setVolumeIcon() {
-            if (this._volume === Constants._volume_LEVEL_MUTED) this._mute_icon.set_icon_name(Constants.ICON_VOLUME_MUTED);
-            else if (this._volume < Constants._volume_LEVEL_LOW) this._mute_icon.set_icon_name(Constants.ICON_VOLUME_LOW);
-            else if (this._volume < Constants._volume_LEVEL_MEDIUM) this._mute_icon.set_icon_name(Constants.ICON_VOLUME_MEDIUM);
+            if (this._volume === Constants.VOLUME_LEVEL_MUTED) this._mute_icon.set_icon_name(Constants.ICON_VOLUME_MUTED);
+            else if (this._volume < Constants.VOLUME_LEVEL_LOW) this._mute_icon.set_icon_name(Constants.ICON_VOLUME_LOW);
+            else if (this._volume < Constants.VOLUME_LEVEL_MEDIUM) this._mute_icon.set_icon_name(Constants.ICON_VOLUME_MEDIUM);
             else this._mute_icon.set_icon_name(Constants.ICON_VOLUME_HIGH);
         }
     },
