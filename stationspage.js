@@ -9,7 +9,7 @@ import * as Constants from "./constants.js";
 
 import { ExtensionPreferences, gettext as _, } from "resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js";
 
-export const StationsPageHandler = class ChannelInfo {
+export const StationsPageHandler = class StationsPageHandler {
     constructor(kayraPrefs) {
         this._kayraPrefs = kayraPrefs;
         this._window = kayraPrefs._window;      
