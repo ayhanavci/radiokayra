@@ -52,12 +52,7 @@ export async function getFullChannelJson(id, uri, clientObject) {
 //Gio.Subprocess read each line
 export async function searchYoutube(searchString, clientObject) {
   try {
-    //yt-dlp ytsearch10:"Rammstein" -j
-    //yt-dlp ytsearch2:"Lofi Girl" -O "{\"channel\":\"%(channel)s\", \"url\":\"%(original_url)s\", \"title\":\"%(fulltitle)s\",\"thumbnail\":\"%(thumbnail)s\", \"is_live\":\"%(is_live)s\", \"duration\":\"%(duration_string)s\"}" --skip-download
-    //yt-dlp ytsearch2:"Rammstein" -O "{\"channel\":\"%(channel)s\", \"url\":\"%(original_url)s\", \"title\":\"%(fulltitle)s\",\"thumbnail\":\"%(thumbnail)s\", \"is_live\":\"%(is_live)s\", \"duration\":\"%(duration_string)s\"}" --skip-download
-    //yt-dlp ytsearch2:"Rammstein" -O "{\"channel:\":\"%(channel)s\", \"url:\":\"%(original_url)s\", \"title\":\"%(fulltitle)s\",\"thumbnail\":\"%(thumbnail)s\", \"is_live\":%(is_live)s, \"duration\":\"%(duration_string)s\", \"like_count\":%(like_count)d}" --skip-download --convert-thumbnails jpg    
-    //{"channel:":"Rammstein Official", "url:":"https://www.youtube.com/watch?v=StZcUAPRRac", "title":"Rammstein - Sonne (Official Video)","thumbnail":"https://i.ytimg.com/vi_webp/StZcUAPRRac/maxresdefault.webp", "is_live":False, "duration":"4:13", "like_count":2167768}
-
+   
     clientObject.proc = Gio.Subprocess.new(
       [
         "yt-dlp",
