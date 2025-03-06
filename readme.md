@@ -37,6 +37,8 @@ Now you can right click on the icon and just paste it in the youtube search.
 
 <img src="./.readme/tooltip.png" alt="Alt Text" width="40%" height="40%">
 
+* Checked for Gnome 48.
+
 ## Channel Management
 
 This window opens if you right click on the radio icon or click "Edit Channels" on the main panel. 
