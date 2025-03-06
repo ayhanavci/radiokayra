@@ -55,6 +55,7 @@ export const ICON_SETTINGS = "emblem-system-symbolic";
 export const ICON_STATIONS_PAGE = "open-menu-symbolic";
 export const ICON_DELETE_CHANNEL = "user-trash-symbolic";
 export const ICON_EDIT_CHANNEL = "document-edit-symbolic";
+export const ICON_ABOUT = "help-about-symbolic";
 
 export const LOG_PREFIX_CHANNELS = "Channels";
 export const LOG_FAILED_TO_LOAD_JSON = "Failed to load channels.json.";

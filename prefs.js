@@ -1,10 +1,11 @@
 import Gio from "gi://Gio";
 
 import * as Utils from "./utils.js";
-import * as SearchRadioPageHandler from "./searchradio.js";
-import * as SearchYoutubePageHandler from "./searchyoutube.js";
-import * as StationsPageHandler from "./stationspage.js";
-import * as SettingsPageHandler from "./settingsspage.js";
+import * as SearchRadioPageHandler from "./prefssearchradio.js";
+import * as SearchYoutubePageHandler from "./prefssearchyoutube.js";
+import * as StationsPageHandler from "./prefsstationspage.js";
+import * as SettingsPageHandler from "./prefssettingsspage.js";
+import * as AboutPageHandler from "./prefsaboutspage.js";
 import * as Constants from "./constants.js";
 
 import { ExtensionPreferences, gettext as _, } from "resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js";
@@ -21,19 +22,23 @@ export default class RadioKayraPreferences extends ExtensionPreferences {
     
     //Stations
     this._stationsPageHandler = new StationsPageHandler.StationsPageHandler(this);
-    this._stationsPageHandler.createStationsPage();
+    this._stationsPageHandler.createPage();
     
     //Youtube Search
     this._searchYoutubePageHandler = new SearchYoutubePageHandler.SearchYoutubePageHandler(this);
-    this._searchYoutubePageHandler.createSearchPage();
+    this._searchYoutubePageHandler.createPage();
     
     //Radio Search
     this._searchRadioPageHandler = new SearchRadioPageHandler.SearchRadioPageHandler(this);
-    this._searchRadioPageHandler.createSearchPage();    
+    this._searchRadioPageHandler.createPage();    
 
-    //Stations
+    //Settings
     this._settingsPageHandler = new SettingsPageHandler.SettingsPageHandler(this);
-    this._settingsPageHandler.createSettingsPage();
+    this._settingsPageHandler.createPage();
+
+    //About
+    this._aboutPageHandler = new AboutPageHandler.AboutPageHandler(this);
+    this._aboutPageHandler.createPage();
 
     window.connect("close-request", () => {      
       if (this._channelsChanged) {

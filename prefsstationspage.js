@@ -19,7 +19,7 @@ export const StationsPageHandler = class StationsPageHandler {
         this._stationsPage = null;  
         this._rows = null;
     }
-    createStationsPage() {
+    createPage() {
         this._stationsPage = new Adw.PreferencesPage();
         this._stationsPage.title = "Stations";
         this._stationsPage.description = _("Add / Edit and Delete radio stations.");

@@ -21,9 +21,9 @@ export const SearchRadioPageHandler = class ChannelInfo {
     clear() { 
         this._httpSession = null; 
     }
-    createSearchPage() {
+    createPage() {
         this._searchPage = new Adw.PreferencesPage();
-        this._searchPage.title = _("Radio Search");
+        this._searchPage.title = _("Radio");
         this._searchPage.icon_name = Constants.ICON_RADIO_SEARCH_PAGE;
         this._window.add(this._searchPage);
 

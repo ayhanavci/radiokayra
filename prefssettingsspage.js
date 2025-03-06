@@ -17,17 +17,14 @@ export const SettingsPageHandler = class SettingsPageHandler {
         this._settingsPage = null;  
         this._rows = null;
     }
-    createSettingsPage() {
+    createPage() {
         this._settingsPage = new Adw.PreferencesPage();
         this._settingsPage.title = "Settings";        
         this._settingsPage.icon_name = Constants.ICON_SETTINGS;
     
         this._window.add(this._settingsPage);
         this._rows = [];        
-                
-        this.asd = new Adw.PreferencesGroup({ title: _('Radio Kayra v2.0. A foss hobby project by Ayhan Avcı (2024-2025)'), description: _("Mid click toggles play / stop.\nDon't forget to install yt-dlp &amp; gstreamer. Links at the bottom. Enjoy!")});
-        this._settingsPage.add(this.asd);        
-        
+
         //Settings
         this._settingsGroup = new Adw.PreferencesGroup();
         
@@ -82,53 +79,7 @@ export const SettingsPageHandler = class SettingsPageHandler {
 
         this._settingsPage.add(this._settingsGroup);                
 
-        this._urlsGroup = new Adw.PreferencesGroup({ title: _('Links')});        
-
-        let row = new Adw.ActionRow();
-        row.title = _("Project");
-        let newLink = new Gtk.LinkButton({
-          valign: Gtk.Align.CENTER,
-          label: "https://github.com/ayhanavci/radiokayra",
-          focusable: 1,
-          uri: "https://github.com/ayhanavci/radiokayra"
-        });        
-        row.add_suffix(newLink);        
-        this._urlsGroup.add(row); 
         
-        row = new Adw.ActionRow();
-        row.title = _("Extension");
-        newLink = new Gtk.LinkButton({
-          valign: Gtk.Align.CENTER,
-          label: "https://extensions.gnome.org/extension/7649/radio-kayra/",
-          focusable: 1,
-          uri: "https://extensions.gnome.org/extension/7649/radio-kayra/"
-        });        
-        row.add_suffix(newLink);        
-        this._urlsGroup.add(row); 
-
-        row = new Adw.ActionRow();
-        row.title = _("Yt-dlp");
-        newLink = new Gtk.LinkButton({
-          valign: Gtk.Align.CENTER,
-          label: "https://github.com/yt-dlp/yt-dlp/wiki/Installation",
-          focusable: 1,
-          uri: "https://github.com/yt-dlp/yt-dlp/wiki/Installation"
-        });        
-        row.add_suffix(newLink);        
-        this._urlsGroup.add(row); 
-        
-        row = new Adw.ActionRow();
-        row.title = _("GStreamer");
-        newLink = new Gtk.LinkButton({
-          valign: Gtk.Align.CENTER,
-          label: "https://gstreamer.freedesktop.org/download/#linux",
-          focusable: 1,
-          uri: "https://gstreamer.freedesktop.org/download/#linux"
-        });        
-        row.add_suffix(newLink);        
-        this._urlsGroup.add(row);         
-
-        this._settingsPage.add(this._urlsGroup);
       }           
  
 }

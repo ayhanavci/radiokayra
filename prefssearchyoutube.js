@@ -16,9 +16,9 @@ export const SearchYoutubePageHandler = class ChannelInfo {
     clear() {
         
     }
-    createSearchPage() {
+    createPage() {
         this.searchPage = new Adw.PreferencesPage();
-        this.searchPage.title = _("Youtube Search");
+        this.searchPage.title = _("Youtube");
         this.searchPage.icon_name = Constants.ICON_YOUTUBE_SEARCH_PAGE;
         this.window.add(this.searchPage);
 
