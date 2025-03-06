@@ -42,5 +42,12 @@
             If true, copies the song title into clipboard when right clicked on the radio icon.
         </description>
     </key>
+    <key name="gnomesearch" type="b">
+        <default>true</default>
+        <summary>Enable native gnome search support</summary>
+        <description>
+            If true, can search for saved stations and play them using Gnome search.
+        </description>
+    </key>
   </schema>
 </schemalist>

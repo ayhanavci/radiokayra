@@ -16,6 +16,7 @@ import * as PopVolumeControl from "./popvolumecontrol.js";
 import * as Channels from "./channels.js";
 import * as Constants from "./constants.js";
 import * as RadioKayra from "./radiokayra.js";
+import * as KayraSearchProvider from "./searchProvider.js";
 
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
@@ -60,6 +61,11 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this._tooltip?.destroy();
             this._tooltip = null;
 
+            if (this._provider != null) {
+                Main.overview.searchController.removeProvider(this._provider);
+                this._provider = null;
+            }
+                        
             super.destroy();
         }
         setTrayIconStopped() {
@@ -86,17 +92,14 @@ export const RadiokayraMenuButton = GObject.registerClass(
             let volume = this._settings.get_double(Constants.SCHEMA_VOLUME_LEVEL);
             this._player = new RadioKayra.RadioPlayer(volume);
 
+            //REFRESH CHANNELS EVENT
             this._settings_changed_handler = this._settings.connect("changed::" + Constants.SCHEMA_CHANNELS_CHANGE_EVENT, () => {
                 console.info(`EXT: ${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNELS_JSON_CHANGED}`);
                 this._channelSection.removeAll();                
                 this.addChannels();
             });
-
-            this._height_changed_handler = this._settings.connect("changed::" + Constants.SCHEMA_PANEL_HEIGHT, () => {                
-                let newHeight = radiokayraPanel._settings.get_int(Constants.SCHEMA_PANEL_HEIGHT);
-                this._channelScrollView.set_height(newHeight);
-            });
-         
+            //REFRESH CHANNELS EVENT            
+                                 
             this._iconStopped = Gio.icon_new_for_string(this._path + Constants.ICON_RADIO_OFF_PATH);
             this._iconPlaying = Gio.icon_new_for_string(this._path + Constants.ICON_RADIO_ON_PATH);
 
@@ -161,6 +164,13 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this._channelScrollView.add_child(this._channelSection.actor);
             let newHeight = radiokayraPanel._settings.get_int(Constants.SCHEMA_PANEL_HEIGHT);
             this._channelScrollView.set_height(newHeight);
+            
+            //PANEL HEIGHT EVENT            
+            this._height_changed_handler = this._settings.connect("changed::" + Constants.SCHEMA_PANEL_HEIGHT, () => {                
+                newHeight = radiokayraPanel._settings.get_int(Constants.SCHEMA_PANEL_HEIGHT);
+                this._channelScrollView.set_height(newHeight);
+            });
+            //PANEL HEIGHT EVENT
 
             this._scrollViewMenuSection.actor.add_child(this._channelScrollView);            
             this.menu.addMenuItem(this._scrollViewMenuSection);
@@ -197,6 +207,29 @@ export const RadiokayraMenuButton = GObject.registerClass(
                 }
             });
 
+            this._provider = null;
+            if (radiokayraPanel._settings.get_boolean(Constants.SCHEMA_GNOME_SEARCH)) 
+            {                
+                this._provider = new KayraSearchProvider.SearchProvider(extension, this);
+                Main.overview.searchController.addProvider(this._provider);
+            }  
+            
+            this._search_event_handler = this._settings.connect("changed::" + Constants.SCHEMA_GNOME_SEARCH, () => {                
+                let bSearch = radiokayraPanel._settings.get_boolean(Constants.SCHEMA_GNOME_SEARCH);
+                console.error("GNOME SEARCH:" + bSearch);
+                if (bSearch) {
+                    if (this._provider != null) {
+                        Main.overview.searchController.removeProvider(this._provider);                                               
+                    }
+                    this._provider = new KayraSearchProvider.SearchProvider(extension, this); 
+                    Main.overview.searchController.addProvider(this._provider);
+                }
+                else {
+                    Main.overview.searchController.removeProvider(this._provider);
+                    this._provider = null;
+                }                                    
+            });
+            
             this.stateReady();
             this.setTrayIconStopped();
         }

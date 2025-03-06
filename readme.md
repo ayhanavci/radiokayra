@@ -28,7 +28,7 @@ It utilizes [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [GStreamer](https://g
 * Language support. For now only English and Turkish. But no coding necessary to add more languages. See [Gjs guide](https://gjs.guide/extensions/development/translations.html#scanning-for-translatable-strings)
 
 ## Features v2.0:
-* Back & Forward buttons to navigate through stations. 
+* Back & Forward buttons to navigate through stations.
 * Radio & Youtube search returns up to 30 results.
 * Settings page. Change scroll area height, right click behaviour.
 * Can copy the currently playing artist+song into clipboard with a right click! (Enable from settings)
@@ -57,7 +57,7 @@ Select "Youtube Search" on the top, type your search phrase and click enter or s
 To add a search result. Just click the + button next to it. This will add the channel name, url and the thumbnail to your stations.
 
 ## Radio Search
-Select "Radio Search" on the top, type your search phrase and click enter or search button. This will perform a radio search and the results will be retrieved and displayed asynchronously. It returns up to 30 results.
+Select "Radio Search" on the top, type your search phrase and click enter or search button. This will perform a radio search and the results will be retrieved synchronously and then displayed (so it may freeze for 1-2 seconds, unlike youtube search). It returns up to 30 results.
 
 <img src="./.readme/radio_search.png" alt="Alt Text" width="100%" height="100%"> 
 

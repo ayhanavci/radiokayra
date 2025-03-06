@@ -67,6 +67,15 @@ export const SettingsPageHandler = class SettingsPageHandler {
                 step_increment: 5
             })
         });
+        //GNOME SEARCH
+        this._gnome_search = new Adw.SwitchRow({
+            title: _("Gnome Search Support"),
+            subtitle: _("Search and play your stations using Gnome search.")
+        });
+        this._schema.bind(Constants.SCHEMA_GNOME_SEARCH, this._gnome_search, 'active', Gio.SettingsBindFlags.DEFAULT);
+        this._settingsGroup.add(this._gnome_search); 
+        //GNOME SEARCH
+
         //this._panel_height_spin.value = 220;
         this._schema.bind(Constants.SCHEMA_PANEL_HEIGHT, this._panel_height_spin, 'value', Gio.SettingsBindFlags.DEFAULT);
         this._settingsGroup.add(this._panel_height_spin); 

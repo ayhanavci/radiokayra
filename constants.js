@@ -25,6 +25,7 @@ export const SCHEMA_PANEL_HEIGHT = "panelheight";
 export const SCHEMA_SONG_TOOLTIP = "showsongtooltip";
 export const SCHEMA_RIGHTCLICK_SETTINGS = "rightclicksettings";
 export const SCHEMA_RIGHTCLICK_COPYSONG = "rightclickcopysong";
+export const SCHEMA_GNOME_SEARCH = "gnomesearch";
 
 export const CSS_SETTINGS_POPUP = "settings-menu-item";
 export const CSS_CHANNEL_LIST_THUMBNAIL = "channel-list-item";
