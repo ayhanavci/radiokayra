@@ -28,7 +28,7 @@ It utilizes [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [GStreamer](https://g
 * Language support. For now only English and Turkish. But no coding necessary to add more languages. See [Gjs guide](https://gjs.guide/extensions/development/translations.html#scanning-for-translatable-strings)
 
 ## Features v2.0:
-* Back & Forward buttons to navigate through 
+* Back & Forward buttons to navigate through stations. 
 * Radio & Youtube search returns up to 30 results.
 * Settings page. Change scroll area height, right click behaviour.
 * Can copy the currently playing artist+song into clipboard with a right click! (Enable from settings)
