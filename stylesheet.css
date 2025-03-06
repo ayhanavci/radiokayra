@@ -16,10 +16,6 @@ main-menu-section StButton.ci-pin-btn {
     width: 300px;
 }
 
-.play-button-icon {
-    
-}
-
 .channel-icon {
     padding-right: 5px;
 }
@@ -28,8 +24,9 @@ main-menu-section StButton.ci-pin-btn {
     padding-left: 2px;
 }
 
-.channel-name-label {
-    padding:5px,
+.channel-name-label {    
+    padding: 4px 12px;    
+    text-align: center;
 }
 .adw-action-row.row {
     width: 100%;
@@ -50,4 +47,22 @@ main-menu-section StButton.ci-pin-btn {
 }
 .channel-manage-box {
     right: 0px;
+}
+
+.layout-box {
+    min-width: 20em;
+    max-width: 20em;    
+}
+
+.play-button-icon {
+    min-width: 5em;
+    max-width: 5em;
+}
+
+.song-info-panel-tooltip {
+    border-radius: 7px;
+    padding: 4px 12px;
+    background-color: rgba(24,24,24,0.8);
+    text-align: center;
+    color: white;    
 }

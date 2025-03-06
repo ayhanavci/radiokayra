@@ -1,19 +1,30 @@
-export const DEFAULT_PANEL_WIDTH = 300;
-export const PER_CHANNEL_PANEL_HEIGHT = 40;
-export const MAX_PANEL_HEIGHT = 300;
 export const VOLUME_LEVEL_MUTED = 0;
 export const VOLUME_LEVEL_LOW = 0.3;
 export const VOLUME_LEVEL_MEDIUM = 0.6;
 export const SEARCH_PIXEL_SIZE = 150;
+
+export const MAX_TOOLTIP_WIDTH = 60;
+export const MAX_SONG_TITLE = 80;
+
+export const PLAY_ICON_SIZE = 60;
+export const PLAY_PREV_ICON_SIZE = 40;
+export const PLAY_NEXT_ICON_SIZE = 40;
+
+export const MAX_YOUTUBE_SEARCH_RESULTS = 30;
+export const MAX_RADIO_SEARCH_RESULTS = 30;
 
 export const SETTINGS_FILE_NAME = "channels.json";
 export const CONFIG_FOLDER_NAME = "radio-kayra";
 export const RADIO_SEARCH_SERVER_URL = 'all.api.radio-browser.info';
 export const VOLUME_POWER = 2;
 
-export const SCHEMA_CHANNEL_EVENT = "channelschangedevent";
+export const SCHEMA_CHANNELS_CHANGE_EVENT = "channelschangedevent";
 export const SCHEMA_LAST_PLAYED = "lastplayed";
 export const SCHEMA_VOLUME_LEVEL = "volumelevel";
+export const SCHEMA_PANEL_HEIGHT = "panelheight";
+export const SCHEMA_SONG_TOOLTIP = "showsongtooltip";
+export const SCHEMA_RIGHTCLICK_SETTINGS = "rightclicksettings";
+export const SCHEMA_RIGHTCLICK_COPYSONG = "rightclickcopysong";
 
 export const CSS_SETTINGS_POPUP = "settings-menu-item";
 export const CSS_CHANNEL_LIST_THUMBNAIL = "channel-list-item";
@@ -23,13 +34,15 @@ export const CSS_CHANNEL_NAME_LABEL = "channel-name-label";
 
 export const ICON_RADIO_ON_PATH = "/images/radio-icon-on.svg";
 export const ICON_RADIO_OFF_PATH = "/images/radio-icon-off.svg";
-export const ICON_RADIO_ON_AIR = "/images/radio-live-symbolic.svg";
+export const ICON_RADIO_ON_AIR_PATH = "/images/radio-live-symbolic.svg";
 export const ICON_CHANNEL_THUMB_PLACEHOLDER = "audio-x-generic-symbolic";
 export const ICON_VOLUME_MUTED = "audio-volume-muted-symbolic";
 export const ICON_VOLUME_LOW = "audio-volume-low-symbolic";
 export const ICON_VOLUME_MEDIUM = "audio-volume-medium-symbolic";
 export const ICON_VOLUME_HIGH = "audio-volume-high-symbolic";
+export const ICON_BACKWARD = "media-skip-backward-symbolic";
 export const ICON_PLAY = "media-playback-start-symbolic";
+export const ICON_FORWARD = "media-skip-forward-symbolic";
 export const ICON_STOP = "media-playback-stop-symbolic";
 export const ICON_ADD_CHANNEL = "list-add-symbolic";
 export const ICON_MOVE_DOWN = "go-down-symbolic";
@@ -37,8 +50,8 @@ export const ICON_MOVE_UP = "go-up-symbolic";
 export const ICON_RADIO_SEARCH_PAGE = "system-search-symbolic";
 export const ICON_YOUTUBE_SEARCH_PAGE = "system-search-symbolic";
 export const ICON_BUTTON_SEARCH_ADD = "list-add-symbolic";
-export const ICON_SETTINGS = "document-properties-symbolic";
-export const ICON_STATIONS_PAGE = "view-list-symbolic";
+export const ICON_SETTINGS = "emblem-system-symbolic";
+export const ICON_STATIONS_PAGE = "open-menu-symbolic";
 export const ICON_DELETE_CHANNEL = "user-trash-symbolic";
 export const ICON_EDIT_CHANNEL = "document-edit-symbolic";
 
@@ -53,6 +66,9 @@ export const LOG_PREFIX_EXTENSION = "Extension";
 export const LOG_INFO_CHANNELS_JSON_CHANGED = "Channels json changed.";
 export const LOG_INFO_CHANNEL_CHANGED = "Channels json changed.";
 export const LOG_INFO_PROCESSED_URL_SUCCESS = "Url process success.";
+export const LOG_INFO_NEXT_CHANNEL = "Next Channel";
+export const LOG_INFO_PREVIOUS_CHANNEL = "Previous Channel";
+export const LOG_INFO_CHANNEL_NAVIGATE = "Channel Navigate";
 export const LOG_PLAYER_ERROR = "Player error.";
 export const LOG_PROCESSED_URL_ERROR = "Processed url error.";
 

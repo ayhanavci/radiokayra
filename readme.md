@@ -7,11 +7,11 @@ It utilizes [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [GStreamer](https://g
 <img src="./.readme/radiokayra.png" alt="Alt Text" width="40%" height="40%">
 
 ## Requirements
-1. [Gnome 47](https://gnome.org/) 
+1. [Gnome 46,47 or 48](https://gnome.org/) 
 2. [GStreamer](https://gstreamer.freedesktop.org/download/#linux) 
 3. [YTDLP](https://github.com/yt-dlp/yt-dlp/wiki/Installation) 
 
-## Features:
+## Features v1.0:
 * Gnome tray icon. Play/Stop button. Volume slider.
 * Channel list in a scroll view. Plays with one click.
 * Auto downloads Radio/Video name and thumbnail. You don't have to manually enter.
@@ -27,6 +27,15 @@ It utilizes [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [GStreamer](https://g
 * Live channels that are detected by yt-dlp have a live icon below their thumbnail. Otherwise its duration is displayed in hh:mm:ss format.
 * Language support. For now only English and Turkish. But no coding necessary to add more languages. See [Gjs guide](https://gjs.guide/extensions/development/translations.html#scanning-for-translatable-strings)
 
+## Features v2.0:
+* Back & Forward buttons to navigate through 
+* Radio & Youtube search returns up to 30 results.
+* Settings page. Change scroll area height, right click behaviour.
+* Can copy the currently playing artist+song into clipboard with a right click! (Enable from settings)
+* Displays Artist / Song / Station info tooltip when you hover over the radio icon. (Can be disabled)
+
+<img src="./.readme/tooltip.png" alt="Alt Text" width="40%" height="40%">
+
 ## Channel Management
 
 This window opens if you right click on the radio icon or click "Edit Channels" on the main panel. 
@@ -41,14 +50,14 @@ Here you can paste your own stream url and a name.
 
 
 ## Youtube Search
-Select "Youtube Search" on the top, type your search phrase and click enter or search button. This will perform a youtube search and the results will be retrieved and displayed asynchronously. It returns up to 10 results. 
+Select "Youtube Search" on the top, type your search phrase and click enter or search button. This will perform a youtube search and the results will be retrieved and displayed asynchronously. It returns up to 30 results. 
 
 <img src="./.readme/youtube_search.png" alt="Alt Text" width="100%" height="100%"> 
 
 To add a search result. Just click the + button next to it. This will add the channel name, url and the thumbnail to your stations.
 
 ## Radio Search
-Select "Radio Search" on the top, type your search phrase and click enter or search button. This will perform a radio search and the results will be retrieved and displayed asynchronously. It returns up to 20 results.
+Select "Radio Search" on the top, type your search phrase and click enter or search button. This will perform a radio search and the results will be retrieved and displayed asynchronously. It returns up to 30 results.
 
 <img src="./.readme/radio_search.png" alt="Alt Text" width="100%" height="100%"> 
 
@@ -59,11 +68,15 @@ You can click radio icon and click any channel to play. But you can also search 
 
 <img src="./.readme/gnome_search.png" alt="Alt Text" width="100%" height="100%"> 
 
+## Settings
+
+Here you can change the right and hover click behaviour as well as the scroll area height. 
+
+<img src="./.readme/settings.png" alt="Alt Text" width="100%" height="100%"> 
+
 ## Notes
 * If you only use radio channels-direct links, the extension should work without installing yt-dlp but features will be lacking.
-* Extension should work with previous versions of gnome 47 but I haven't tested.
 * Extension stops all activity on screen lock.
-* Channel list height shrinks and expands dynamically depending on the channel count.
 * If a channel thumbnail is not provided by the host url, then a placeholder icon is used (```audio-x-generic-symbolic```).
 * Thumbnails and channel list json file are saved in your `/.config/radio-kayra` folder and is kept on updates.
 * channels.json file only holds the channels. Each node is in the following format:
@@ -80,7 +93,7 @@ You can click radio icon and click any channel to play. But you can also search 
 * Key features are decoupled and are represented in seperate files for ease of modification.    
     1. Icon names used and various size constants are in ```constants.js```
     2. yt-dlp commands are in ```ytdlphandler.js```
-    3. Every sub-panel has a seperate class and is in ```popups.js```
+    3. Every sub-panel has a seperate class and file ```popXXX.js```
     4. GStreamer related code is only inside ```radiokayra.js```
     5. Search functionalities are in ```searchradio.js```, ```searchyoutube.js``` and gnome search is in ```searchProvider.js```
 

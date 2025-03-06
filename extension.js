@@ -10,11 +10,12 @@ export default class RadioKayraExtension extends Extension {
     console.info(`constructing ${this.metadata.name}`);
   }
   addSettingsWindow() {}
-  enable() {        
+  enable() {             
     this.menuButton = new KayraMenu.RadiokayraMenuButton(this);
     this._provider = new KayraSearchProvider.SearchProvider(this, this.menuButton);
     Main.overview.searchController.addProvider(this._provider);
     Main.panel.addToStatusArea(this.uuid, this.menuButton);
+    
   }
 
   disable() {    

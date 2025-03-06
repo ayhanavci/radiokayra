@@ -87,7 +87,6 @@ export const RadioPlayer = class RadioPlayer {
         }
       case Gst.MessageType.STREAM_START:
         //console.log(`${Constants.LOG_PREFIX_RADIO_PLAYER} ${Constants.LOG_GST_STREAM_STARTED}`);                         
-        this.setVolume(this.volume);
         if (this.onStreamStarted !== null) this.onStreamStarted();
         break;
       case Gst.MessageType.NEED_CONTEXT: //536870912

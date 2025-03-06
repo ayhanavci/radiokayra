@@ -72,7 +72,7 @@ export const SearchRadioPageHandler = class ChannelInfo {
         if (input !== null && input.trim().length > 0) {
             let params = {
                 name: input,
-                limit: '20'
+                limit: `${Constants.MAX_RADIO_SEARCH_RESULTS}`
             };
             let message = Soup.Message.new_from_encoded_form(
                 'POST',

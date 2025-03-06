@@ -44,3 +44,9 @@ export function saveThumbnail(thumbnailPath, destinationFileName) {
 }
 
 export function getConfigPath() { return GLib.get_user_config_dir() + "/" + Constants.CONFIG_FOLDER_NAME; }
+
+export function truncateString(string, limit) { 
+    if (string.length <= limit) return string;
+    return string.slice(0, limit) + "...";
+}
+

@@ -16,5 +16,31 @@
       <summary>Volume Level</summary>
       <description></description>
     </key>
+    <key name="panelheight" type="i">
+      <default>300</default>
+      <summary>Panel Height</summary>
+      <description></description>
+    </key>
+    <key name="showsongtooltip" type="b">
+        <default>true</default>
+        <summary>Display song tooltip</summary>
+        <description>
+            If true, shows the song, artist, station info when hovered over the radio icon
+        </description>
+    </key>
+    <key name="rightclicksettings" type="b">
+        <default>true</default>
+        <summary>Opens the settings on right click</summary>
+        <description>
+            If true, opens the settings window when right clicked on the radio icon.
+        </description>
+    </key>
+    <key name="rightclickcopysong" type="b">
+        <default>false</default>
+        <summary>Copy the song title on right click</summary>
+        <description>
+            If true, copies the song title into clipboard when right clicked on the radio icon.
+        </description>
+    </key>
   </schema>
 </schemalist>

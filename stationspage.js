@@ -179,7 +179,7 @@ export const StationsPageHandler = class StationsPageHandler {
         dialog.set_presentation_mode(Adw.ADW_DIALOG_BOTTOM_SHEET);
         dialog.set_can_close(true);
     
-        let dlgContentBox = new Gtk.Box({
+        let dlgContentBox = new Gtk.Box({          
           orientation: Gtk.Orientation.VERTICAL,
           spacing: 10,
         });

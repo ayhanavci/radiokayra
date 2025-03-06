@@ -36,7 +36,7 @@ export const SearchYoutubePageHandler = class ChannelInfo {
             label: _("Search")
         });
         let hbox = new Gtk.Box({
-            orientation: Gtk.Orientation.HORIZONTAL,
+            orientation: Gtk.Orientation.HORIZONTAL,                    
             "spacing": 10,
             "margin-start": 0,
             "margin-end": 0,

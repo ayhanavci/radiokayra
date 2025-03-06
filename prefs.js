@@ -4,6 +4,7 @@ import * as Utils from "./utils.js";
 import * as SearchRadioPageHandler from "./searchradio.js";
 import * as SearchYoutubePageHandler from "./searchyoutube.js";
 import * as StationsPageHandler from "./stationspage.js";
+import * as SettingsPageHandler from "./settingsspage.js";
 import * as Constants from "./constants.js";
 
 import { ExtensionPreferences, gettext as _, } from "resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js";
@@ -15,8 +16,8 @@ export default class RadioKayraPreferences extends ExtensionPreferences {
     console.info(`constructing ${this.metadata.name}`);
   }
   fillPreferencesWindow(window) {
-    this._window = window;    
-    this._channelsChanged = false;    
+    this._window = window;        
+    this._channelsChanged = false;        
     
     //Stations
     this._stationsPageHandler = new StationsPageHandler.StationsPageHandler(this);
@@ -30,19 +31,25 @@ export default class RadioKayraPreferences extends ExtensionPreferences {
     this._searchRadioPageHandler = new SearchRadioPageHandler.SearchRadioPageHandler(this);
     this._searchRadioPageHandler.createSearchPage();    
 
+    //Stations
+    this._settingsPageHandler = new SettingsPageHandler.SettingsPageHandler(this);
+    this._settingsPageHandler.createSettingsPage();
+
     window.connect("close-request", () => {      
       if (this._channelsChanged) {
         let val = Utils.uuidv4();
-        this.getSettings().set_string(Constants.SCHEMA_CHANNEL_EVENT, Utils.uuidv4(val));  
+        this.getSettings().set_string(Constants.SCHEMA_CHANNELS_CHANGE_EVENT, Utils.uuidv4(val));  
       } 
        
       this._searchRadioPageHandler.clear();
       this._searchYoutubePageHandler.clear();
       this._stationsPageHandler.clear();
+      this._settingsPageHandler.clear();
 
       this._searchRadioPageHandler = null;
       this._searchYoutubePageHandler = null;
       this._stationsPageHandler = null;
+      this._settingsPageHandler = null;
     });
   }      
 }
