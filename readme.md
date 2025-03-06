@@ -71,7 +71,7 @@ You can click radio icon and click any channel to play. But you can also search 
 
 ## Settings
 
-Here you can change the right and hover click behaviour as well as the scroll area height. 
+Here you can change the right click and hover behaviour as well as the scroll area height. 
 
 <img src="./.readme/settings.png" alt="Alt Text" width="100%" height="100%"> 
 
