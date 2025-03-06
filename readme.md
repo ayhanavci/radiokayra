@@ -1,4 +1,19 @@
-# Radio Kayra
+* [Introduction](#introduction)
+* [Requirements](#requirements)
+* [Features](#Features)
+    * [v1.0](#v10)
+    * [v2.0](#v20)
+* [Channel Management](#channel-management)
+* [Station Search](#station-search)
+    * [Youtube](#youtube)
+    * [Radio](#radio)
+* [Gnome Shell Search](#gnome-search)
+* [Settings](#settings)
+* [Notes](#notes)
+* [Contact](#contact)
+
+
+# Introduction
 
 Radio Kayra is a free and open source [Gnome](https://www.gnome.org/) desktop extension that plays your favorite music and podcast streams in the background. 
 
@@ -6,12 +21,13 @@ It utilizes [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [GStreamer](https://g
 
 <img src="./.readme/radiokayra.png" alt="Alt Text" width="40%" height="40%">
 
-## Requirements
+# Requirements
 1. [Gnome 46,47 or 48](https://gnome.org/) 
 2. [GStreamer](https://gstreamer.freedesktop.org/download/#linux) 
 3. [YTDLP](https://github.com/yt-dlp/yt-dlp/wiki/Installation) 
 
-## Features v1.0:
+# Features 
+## v1.0
 * Gnome tray icon. Play/Stop button. Volume slider.
 * Channel list in a scroll view. Plays with one click.
 * Auto downloads Radio/Video name and thumbnail. You don't have to manually enter.
@@ -27,7 +43,7 @@ It utilizes [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [GStreamer](https://g
 * Live channels that are detected by yt-dlp have a live icon below their thumbnail. Otherwise its duration is displayed in hh:mm:ss format.
 * Language support. For now only English and Turkish. But no coding necessary to add more languages. See [Gjs guide](https://gjs.guide/extensions/development/translations.html#scanning-for-translatable-strings)
 
-## Features v2.0:
+## v2.0:
 * Back & Forward buttons to navigate through stations.
 * Radio & Youtube search returns up to 30 results.
 * Settings page. Change scroll area height, right click behaviour.
@@ -39,7 +55,7 @@ Now you can right click on the icon and just paste it in the youtube search.
 
 * Checked for Gnome 48.
 
-## Channel Management
+# Channel Management
 
 This window opens if you right click on the radio icon or click "Edit Channels" on the main panel. 
 <img src="./.readme/channel_management.png" alt="Alt Text" width="100%" height="100%">
@@ -51,33 +67,34 @@ Here you can paste your own stream url and a name.
 * If the url requires no resolving (a direct url to a stream), then uncheck "Use yt-dlp?". Enter a name and click "Add".
 * If the url requires resolving (i.e. Youtube, Rumble, Twitter/X) and is [supported by yt-dlp](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md), then paste the url and leave "Use yt-dlp?" checked. You can enter a name manually or you can click "Fetch from url" to let yt-dlp retrieve the official title (recommended). You can later edit the field.
 
+# Station Search
 
-## Youtube Search
+## Youtube
 Select "Youtube Search" on the top, type your search phrase and click enter or search button. This will perform a youtube search and the results will be retrieved and displayed asynchronously. It returns up to 30 results. 
 
 <img src="./.readme/youtube_search.png" alt="Alt Text" width="100%" height="100%"> 
 
 To add a search result. Just click the + button next to it. This will add the channel name, url and the thumbnail to your stations.
 
-## Radio Search
+## Radio
 Select "Radio Search" on the top, type your search phrase and click enter or search button. This will perform a radio search and the results will be retrieved synchronously and then displayed (so it may freeze for 1-2 seconds, unlike youtube search). It returns up to 30 results.
 
 <img src="./.readme/radio_search.png" alt="Alt Text" width="100%" height="100%"> 
 
 To add a search result. Just click the + button next to it. This will add the channel name, url and the thumbnail to your stations.
 
-## Gnome Search
+# Gnome Search
 You can click radio icon and click any channel to play. But you can also search through your channels using integrated Gnome shell search feature. Clicking any of the search results starts playing the channel.
 
 <img src="./.readme/gnome_search.png" alt="Alt Text" width="100%" height="100%"> 
 
-## Settings
+# Settings
 
 Here you can change the right click and hover behaviour as well as the scroll area height. 
 
 <img src="./.readme/settings.png" alt="Alt Text" width="100%" height="100%"> 
 
-## Notes
+# Notes
 * If you only use radio channels-direct links, the extension should work without installing yt-dlp but features will be lacking.
 * Extension stops all activity on screen lock.
 * If a channel thumbnail is not provided by the host url, then a placeholder icon is used (```audio-x-generic-symbolic```).
@@ -103,7 +120,8 @@ Here you can change the right click and hover behaviour as well as the scroll ar
 * I will probably add MPV support as an alternative to GStreamer in the future.
 * Code checked with [eslint](https://eslint.org/)  
 
-Contact: ayhanavci@gmail.com
+# Contact
+ayhanavci@gmail.com
 
 Enjoy,
 Ayhan
