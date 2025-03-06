@@ -70,14 +70,14 @@ Here you can paste your own stream url and a name.
 # Station Search
 
 ## Youtube
-Select "Youtube Search" on the top, type your search phrase and click enter or search button. This will perform a youtube search and the results will be retrieved and displayed asynchronously. It returns up to 30 results. 
+Select "Youtube" tab, type your search phrase and click enter or search button. This will perform a youtube search and the results will be retrieved and displayed asynchronously. It returns up to 30 results. 
 
 <img src="./.readme/youtube_search.png" alt="Alt Text" width="100%" height="100%"> 
 
 To add a search result. Just click the + button next to it. This will add the channel name, url and the thumbnail to your stations.
 
 ## Radio
-Select "Radio Search" on the top, type your search phrase and click enter or search button. This will perform a radio search and the results will be retrieved synchronously and then displayed (so it may freeze for 1-2 seconds, unlike youtube search). It returns up to 30 results.
+Select "Radio" tab, type your search phrase and click enter or search button. This will perform a radio search and the results will be retrieved synchronously and then displayed (so it may freeze for 1-2 seconds, unlike youtube search). It returns up to 30 results.
 
 <img src="./.readme/radio_search.png" alt="Alt Text" width="100%" height="100%"> 
 
@@ -90,7 +90,7 @@ You can click radio icon and click any channel to play. But you can also search 
 
 # Settings
 
-Here you can change the right click and hover behaviour as well as the scroll area height. 
+Select "Settings" tab. Here you can change the right click and hover behaviour as well as the scroll area height. 
 
 <img src="./.readme/settings.png" alt="Alt Text" width="100%" height="100%"> 
 
