@@ -32,6 +32,7 @@ It utilizes [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [GStreamer](https://g
 * Radio & Youtube search returns up to 30 results.
 * Settings page. Change scroll area height, right click behaviour.
 * Can copy the currently playing artist+song into clipboard with a right click! (Enable from settings)
+Now you can right click on the icon and just paste it in the youtube search.
 * Displays Artist / Song / Station info tooltip when you hover over the radio icon. (Can be disabled)
 
 <img src="./.readme/tooltip.png" alt="Alt Text" width="40%" height="40%">
