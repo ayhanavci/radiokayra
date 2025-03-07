@@ -13,20 +13,11 @@ export default class RadioKayraExtension extends Extension {
   addSettingsWindow() {}
   enable() {             
     this.menuButton = new KayraMenu.RadiokayraMenuButton(this);        
-    this._provider = null;
-    /*if (this.getSettings().get_boolean(Constants.SCHEMA_GNOME_SEARCH)) 
-    {
-        this._provider = new KayraSearchProvider.SearchProvider(this, this.menuButton);
-        Main.overview.searchController.addProvider(this._provider);
-    }        */
+    this._provider = null;    
     Main.panel.addToStatusArea(this.uuid, this.menuButton);    
   }
 
-  disable() {     
-    /*if (this._provider != null) {
-        Main.overview.searchController.removeProvider(this._provider);
-        this._provider = null;
-    } */      
+  disable() {          
     this.menuButton?.destroy();
     this.menuButton = null;
   }    

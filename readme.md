@@ -9,6 +9,7 @@
     * [Radio](#radio)
 * [Gnome Shell Search](#gnome-search)
 * [Settings](#settings)
+* [Translations](#translations)
 * [Notes](#notes)
 * [Contact](#contact)
 
@@ -93,6 +94,21 @@ You can click radio icon and click any channel to play. But you can also search 
 Select "Settings" tab. Here you can change the right click and hover behaviour as well as the scroll area height. 
 
 <img src="./.readme/settings.png" alt="Alt Text" width="100%" height="100%"> 
+
+# Translations
+
+The extension has English and Turkish languages are supported by default. But any language can be added without having any programming knowledge.
+
+The strings are ready to be translated by using a program such as [PoEdit](https://poedit.net/download) 
+
+* Open the file at your extensions folder 
+
+    ```.../radiokayra@dokaton.com/po/radiokayra@dokaton.com.pot```  
+
+* Then you can compile the translations as described in [GJS Guide](https://gjs.guide/extensions/development/translations.html#compiling-translations).
+On your extensions folder: 
+
+    ```gnome-extensions pack --podir=po example@gjs.guide```
 
 # Notes
 * If you only use radio channels-direct links, the extension should work without installing yt-dlp but features will be lacking.
