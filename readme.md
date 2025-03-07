@@ -97,7 +97,7 @@ Select "Settings" tab. Here you can change the right click and hover behaviour a
 
 # Translations
 
-The extension has English and Turkish languages are supported by default. But any language can be added without having any programming knowledge.
+The extension has English and Turkish languages support by default. But any language can be added without having any programming knowledge.
 
 The strings are ready to be translated by using a program such as [PoEdit](https://poedit.net/download) 
 
