@@ -2,8 +2,6 @@ import { Extension, gettext as _, } from "resource:///org/gnome/shell/extensions
 import * as Main from "resource:///org/gnome/shell/ui/main.js";
 import Gio from "gi://Gio";
 import * as KayraMenu from "./kayramenu.js";
-import * as KayraSearchProvider from "./searchProvider.js";
-import * as Constants from "./constants.js";
 
 export default class RadioKayraExtension extends Extension {
   constructor(metadata) {

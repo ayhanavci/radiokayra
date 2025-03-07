@@ -6,7 +6,6 @@ import * as Channels from "./channels.js";
 import * as YtdlpHandler from "./ytdlphandler.js";
 import * as Utils from "./utils.js";
 import * as Constants from "./constants.js";
-
 import { ExtensionPreferences, gettext as _, } from "resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js";
 
 export const StationsPageHandler = class StationsPageHandler {

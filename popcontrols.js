@@ -6,7 +6,6 @@ import * as PopupMenu from "resource:///org/gnome/shell/ui/popupMenu.js";
 import * as Constants from "./constants.js";
 import { gettext as _, } from "resource:///org/gnome/shell/extensions/extension.js";
 
-
 export const ControlsPopup = GObject.registerClass(
     {
         GTypeName: "ControlsPopup",

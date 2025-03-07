@@ -6,7 +6,6 @@ import * as Slider from "resource:///org/gnome/shell/ui/slider.js";
 
 import * as Constants from "./constants.js";
 import { gettext as _, } from "resource:///org/gnome/shell/extensions/extension.js";
-import * as Utils from "./utils.js";
 
 export const VolumeControlPopup = GObject.registerClass(
     {
