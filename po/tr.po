@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-04 16:24+0300\n"
-"PO-Revision-Date: 2024-12-04 16:30+0300\n"
+"POT-Creation-Date: 2025-03-07 14:09+0300\n"
+"PO-Revision-Date: 2025-03-07 14:12+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: tr\n"
@@ -18,114 +18,195 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
 
-#: extension.js:130
-msgid "Edit Channels"
-msgstr "Kanalları Düzenle"
+#: kayramenu.js:147 prefssettingsspage.js:22
+msgid "Settings"
+msgstr "Ayarlar"
 
-#: popups.js:142
-msgid "Playing..."
-msgstr "Çalıyor..."
-
-#: popups.js:148
+#: popstreaminfo.js:175
 msgid "Loading..."
 msgstr "Yüklüyor..."
 
-#: popups.js:154
+#: popstreaminfo.js:185
 msgid "Ready..."
 msgstr "Hazır..."
 
-#: prefs.js:47
-msgid "Add / Edit and Delete radio stations."
-msgstr "Radyo kanallarını ekle / düzenle veya sil."
+#: prefsaboutspage.js:20
+msgid "About"
+msgstr "Hakkında"
 
-#: prefs.js:55
-msgid "Radio Channels"
-msgstr "Radyo kanalları"
+#: prefsaboutspage.js:26
+msgid ""
+"Radio Kayra v2.0\n"
+"A foss hobby project by Ayhan Avcı (2024-2025)"
+msgstr ""
+"Radio Kayra v2.0\n"
+"Bir açık kaynak hobi projesi. Ayhan Avcı (2024-2025)"
 
-#: prefs.js:201
-msgid "Add a New Channel"
-msgstr "Yeni Kanal"
+#: prefsaboutspage.js:26
+msgid ""
+"Mid clicking the radio icon toggles play / stop.\n"
+"Don't forget to install yt-dlp &amp; gstreamer. Links at the bottom. Enjoy!"
+msgstr ""
+"İkona orta fare ile tıklamak müziği başlatır veya durdurur\n"
+"yt-dlp &amp; gstreamer kurulumlarını yapmayı unutmayın. Bağlantılar altta. İyi eğlenceler!"
 
-#: prefs.js:201
-msgid "Edit Channel"
-msgstr "Kanal düzenle"
+#: prefsaboutspage.js:29
+msgid "Links"
+msgstr "Bağlantılar"
 
-#: prefs.js:219
-msgid "Channel URL:"
-msgstr "Kanal bağlantısı:"
+#: prefsaboutspage.js:32
+msgid "Project"
+msgstr "Proje"
 
-#: prefs.js:243
-msgid "Channel Name:"
-msgstr "Kanal adı:"
+#: prefsaboutspage.js:43
+msgid "Extension"
+msgstr "Eklenti"
 
-#: prefs.js:253
-msgid "Fetch from url"
-msgstr "Bağlantıdan oku"
+#: prefsaboutspage.js:54
+msgid "Yt-dlp"
+msgstr "yt-dlp kullan?  "
 
-#: prefs.js:275
-msgid "Use yt-dlp?"
-msgstr "yt-dlp kullanılsın mı?  "
+#: prefsaboutspage.js:65
+msgid "GStreamer"
+msgstr "GStreamer"
 
-#: prefs.js:277
-msgid "Add"
-msgstr "Ekle"
+#: prefssearchradio.js:26
+msgid "Radio"
+msgstr "Radyo"
 
-#: prefs.js:277
-msgid "Update"
-msgstr "Güncelle"
-
-#: searchradio.js:24
-msgid "Radio Search"
-msgstr "Radyo ara"
-
-#: searchradio.js:29 searchradio.js:39 searchyoutube.js:27 searchyoutube.js:37
+#: prefssearchradio.js:31 prefssearchradio.js:41 prefssearchyoutube.js:26
+#: prefssearchyoutube.js:36
 msgid "Search"
 msgstr "Ara"
 
-#: searchradio.js:33
+#: prefssearchradio.js:35
 msgid "Channel name"
-msgstr "Kanal adı"
+msgstr "Kanal Adı"
 
-#: searchradio.js:63 searchyoutube.js:63
+#: prefssearchradio.js:65 prefssearchyoutube.js:62
 msgid "Search Results"
-msgstr "Arama sonuçları"
+msgstr "Arama Sonuçları"
 
-#: searchradio.js:125
+#: prefssearchradio.js:127
 msgid "Country: "
 msgstr "Ülke: "
 
-#: searchradio.js:126
+#: prefssearchradio.js:128
 msgid "Tags: "
 msgstr "Etiketler: "
 
-#: searchradio.js:127 searchyoutube.js:94
+#: prefssearchradio.js:129 prefssearchyoutube.js:93
 msgid "Link: "
 msgstr "Bağlantı: "
 
-#: searchradio.js:128
+#: prefssearchradio.js:130
 msgid "Codec: "
 msgstr "Kodek: "
 
-#: searchradio.js:129
+#: prefssearchradio.js:131
 msgid "Bitrate: "
 msgstr "Bitrate: "
 
-#: searchyoutube.js:22
-msgid "Youtube Search"
-msgstr "Youtube'da Ara"
+#: prefssearchyoutube.js:21
+msgid "Youtube"
+msgstr "Youtube"
 
-#: searchyoutube.js:31
+#: prefssearchyoutube.js:30
 msgid "Video name"
 msgstr "Video adı"
 
-#: searchyoutube.js:93
+#: prefssearchyoutube.js:92
 msgid "Likes: "
 msgstr "Beğeniler: "
 
-#: searchyoutube.js:95
+#: prefssearchyoutube.js:94
 msgid "Is Live: "
-msgstr "Canlı mı "
+msgstr "Canlı mı: "
 
-#: searchyoutube.js:96
+#: prefssearchyoutube.js:95
 msgid "Duration: "
-msgstr "Süre "
+msgstr "Süre: "
+
+#: prefssettingsspage.js:33
+msgid "Show hover tooltip"
+msgstr "Fare gezdirdiğinde bilgi"
+
+#: prefssettingsspage.js:34
+msgid "Shows the song, artist, station info when you hover on the radio icon"
+msgstr "Fare radyo ikonunda gezdiğinde şarkı, sanatçı, istasyon bilgisi göster"
+
+#: prefssettingsspage.js:42
+msgid "Right click - Settings"
+msgstr "Sağ tık - Ayarlar"
+
+#: prefssettingsspage.js:43
+msgid "Opens the settings(this) window when you right click on the radio icon."
+msgstr "Radyo ikonuna sağ tıkladığında ayarları açar."
+
+#: prefssettingsspage.js:51
+msgid "Right click - Copy Song"
+msgstr "Sağ tık - Şarkıyı kopyala"
+
+#: prefssettingsspage.js:52
+msgid "Copies the song title to clipboard when you right click on the radio icon."
+msgstr "Radyo ikonuna sağ tıkladığında şarkı adını kopyalar."
+
+#: prefssettingsspage.js:59
+msgid "Panel Height"
+msgstr "Panel uzunluğu"
+
+#: prefssettingsspage.js:60
+msgid "The height of the extension window when opened."
+msgstr "Pencere açıldığındaki yükseklik."
+
+#: prefssettingsspage.js:69
+msgid "Gnome Search Support"
+msgstr "Gnome Arama Desteği"
+
+#: prefssettingsspage.js:70
+msgid "Search and play your stations using Gnome search."
+msgstr "Gnome aramasında kanallarınız da görünür."
+
+#: prefsstationspage.js:24
+msgid "Stations"
+msgstr "İstasyonlar"
+
+#: prefsstationspage.js:25
+msgid "Add / Edit and Delete radio stations."
+msgstr "İstasyon Ekle / Düzenle ve Sil."
+
+#: prefsstationspage.js:33
+msgid "Radio Channels"
+msgstr "Radyo Kanalları"
+
+#: prefsstationspage.js:178
+msgid "Add a New Channel"
+msgstr "Yeni Kanal"
+
+#: prefsstationspage.js:178
+msgid "Edit Channel"
+msgstr "Kanalı Düzenle"
+
+#: prefsstationspage.js:196
+msgid "Channel URL:"
+msgstr "Kanal bağlantısı:"
+
+#: prefsstationspage.js:220
+msgid "Channel Name:"
+msgstr "Kanal Adı:"
+
+#: prefsstationspage.js:230
+msgid "Fetch from url"
+msgstr "Bağlantıdan çek"
+
+#: prefsstationspage.js:252
+msgid "Use yt-dlp?"
+msgstr "yt-dlp kullan?"
+
+#: prefsstationspage.js:255
+msgid "Add"
+msgstr "Ekle"
+
+#: prefsstationspage.js:255
+msgid "Update"
+msgstr "Güncelle"

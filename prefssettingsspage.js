@@ -19,7 +19,7 @@ export const SettingsPageHandler = class SettingsPageHandler {
     }
     createPage() {
         this._settingsPage = new Adw.PreferencesPage();
-        this._settingsPage.title = "Settings";        
+        this._settingsPage.title = _("Settings");        
         this._settingsPage.icon_name = Constants.ICON_SETTINGS;
     
         this._window.add(this._settingsPage);

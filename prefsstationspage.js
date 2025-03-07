@@ -21,7 +21,7 @@ export const StationsPageHandler = class StationsPageHandler {
     }
     createPage() {
         this._stationsPage = new Adw.PreferencesPage();
-        this._stationsPage.title = "Stations";
+        this._stationsPage.title = _("Stations");
         this._stationsPage.description = _("Add / Edit and Delete radio stations.");
         this._stationsPage.icon_name = Constants.ICON_STATIONS_PAGE;
     

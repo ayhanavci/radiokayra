@@ -17,7 +17,7 @@ export const AboutPageHandler = class AboutPageHandler {
     }
     createPage() {
         this._aboutPage = new Adw.PreferencesPage();
-        this._aboutPage.title = "About";        
+        this._aboutPage.title = _("About");        
         this._aboutPage.icon_name = Constants.ICON_ABOUT;
     
         this._window.add(this._aboutPage);
