@@ -20,7 +20,7 @@ export const RadioPlayer = class RadioPlayer {
   }
   changeChannel(uri) {
     if (this.source !== null) this.pipeline.remove(this.source);
-    this.source = Gst.ElementFactory.make("playbin3", "source");
+    this.source = Gst.ElementFactory.make("playbin3", "source");    
     this.source.set_property("uri", uri);
     this.source.set_property("volume", this.volume);
     this.pipeline.add(this.source);
@@ -106,7 +106,7 @@ export const RadioPlayer = class RadioPlayer {
           let error, debug_msg = message.parse_error();
           console.warn(`${Constants.LOG_PREFIX_RADIO_PLAYER} ${Constants.LOG_ERROR_GST_MESSAGE}: [${error}] [${debug_msg}]`);
           this.stop();
-          if (this.onError !== null) this.onError(2, error + debug_msg);
+          if (this.onError !== null) this.onError(2, error + " " + debug_msg);
           break;
         }
       default:

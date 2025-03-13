@@ -374,7 +374,9 @@ export const RadiokayraMenuButton = GObject.registerClass(
             Main.notify('Yt-dlp error', errormsg);
         }
         playResolvedUrl() {
-            radiokayraPanel._player.changeChannel(radiokayraPanel._activeChannel.getResolvedUrl());
+            let url = radiokayraPanel._activeChannel.getResolvedUrl();            
+            url = Utils.processSpecialCharacters(url, false);        
+            radiokayraPanel._player.changeChannel(url);
             radiokayraPanel._player.play();
         }
         stateReady() {
