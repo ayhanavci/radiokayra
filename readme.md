@@ -56,6 +56,11 @@ Now you can right click on the icon and just paste it in the youtube search.
 
 * Checked for Gnome 48.
 
+## v2.1
+* Fixed an [issue](https://github.com/ayhanavci/radiokayra/issues/5) in which some radio stations were not playing.
+* Fixed a minor [issue](https://github.com/ayhanavci/radiokayra/issues/6) in which station page scroll bar was jumping to top when a station was moved up or down.
+* Gnome 48 added to metadata
+
 # Channel Management
 
 This window opens if you right click on the radio icon or click "Edit Channels" on the main panel. 
