@@ -15,6 +15,7 @@ export default class RadioKayraPreferences extends ExtensionPreferences {
   constructor(metadata) {
     super(metadata);
     console.info(`constructing ${this.metadata.name}`);
+    this.initTranslations('radiokayra@dokaton.com');
   }
   fillPreferencesWindow(window) {
     this._window = window;        
