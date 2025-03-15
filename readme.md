@@ -54,7 +54,7 @@ Now you can right click on the icon and just paste it in the youtube search.
 
 <img src="./.readme/tooltip.png" alt="Alt Text" width="40%" height="40%">
 
-* Checked for Gnome 48.
+* Checked for Gnome 48. (St Widgets Orientation update)
 
 ## v2.1
 * Fixed an [issue](https://github.com/ayhanavci/radiokayra/issues/5) in which some radio stations were not playing.
