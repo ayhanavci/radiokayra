@@ -14,8 +14,7 @@ import { ExtensionPreferences, gettext as _, } from "resource:///org/gnome/Shell
 export default class RadioKayraPreferences extends ExtensionPreferences {
   constructor(metadata) {
     super(metadata);
-    console.info(`constructing ${this.metadata.name}`);
-    this.initTranslations('radiokayra@dokaton.com');
+    console.info(`constructing ${this.metadata.name}`);    
   }
   fillPreferencesWindow(window) {
     this._window = window;        
