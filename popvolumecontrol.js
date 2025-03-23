@@ -1,5 +1,6 @@
 import GObject from "gi://GObject";
 import St from "gi://St";
+import Clutter from "gi://Clutter";
 
 import * as PopupMenu from "resource:///org/gnome/shell/ui/popupMenu.js";
 import * as Slider from "resource:///org/gnome/shell/ui/slider.js";

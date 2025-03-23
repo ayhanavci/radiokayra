@@ -4,6 +4,7 @@ import St from "gi://St";
 import Clutter from "gi://Clutter";
 import Pango from "gi://Pango";
 import GdkPixbuf from "gi://GdkPixbuf";
+import Clutter from "gi://Clutter";
 
 import * as PopupMenu from "resource:///org/gnome/shell/ui/popupMenu.js";
 import * as Animation from "resource:///org/gnome/shell/ui/animation.js";

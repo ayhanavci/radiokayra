@@ -22,8 +22,11 @@ export const AboutPageHandler = class AboutPageHandler {
     
         this._window.add(this._aboutPage);
         this._rows = [];        
+        let title_text = 'Radio Kayra v2.1\n';
+        title_text += _('A foss hobby project by Ayhan Avcı');
+        title_text += _('(2024-2025)');
                 
-        this.about = new Adw.PreferencesGroup({ title: _('Radio Kayra v2.1\nA foss hobby project by Ayhan Avcı (2024-2025)'), description: _("Mid clicking the radio icon toggles play / stop.\nDon't forget to install yt-dlp &amp; gstreamer. Links at the bottom. Enjoy!")});
+        this.about = new Adw.PreferencesGroup({ title: title_text, description: _("Mid clicking the radio icon toggles play / stop.\nDon't forget to install yt-dlp &amp; gstreamer. Links at the bottom. Enjoy!")});
         this._aboutPage.add(this.about);        
                                                        
         this._urlsGroup = new Adw.PreferencesGroup({ title: _('Links')});        
