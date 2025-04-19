@@ -72,7 +72,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this._trayIcon.set_gicon(this._iconStopped);
         }
         setTrayIconPlaying() {
-            this._trayIcon.set_gicon(radiokayraPanel._iconPlaying);
+            this._trayIcon.set_gicon(this._iconPlaying);
         }
         openPreferences() {
             this._kayraExtension.openPreferences();
@@ -100,7 +100,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
                 this.addChannels();
             });
             //REFRESH CHANNELS EVENT            
-                                 
+
             this._iconStopped = Gio.icon_new_for_string(this._path + Constants.ICON_RADIO_OFF_PATH);
             this._iconPlaying = Gio.icon_new_for_string(this._path + Constants.ICON_RADIO_ON_PATH);
 
