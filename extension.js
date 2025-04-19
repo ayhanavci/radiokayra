@@ -6,10 +6,10 @@ import * as KayraMenu from "./kayramenu.js";
 export default class RadioKayraExtension extends Extension {
   constructor(metadata) {
     super(metadata);
-    console.info(`constructing ${this.metadata.name}`);
+    //console.info(`constructing ${this.metadata.name}`);
   }
-  addSettingsWindow() {}
-  enable() {             
+  
+  enable() {                 
     this.menuButton = new KayraMenu.RadiokayraMenuButton(this);        
     this._provider = null;    
     Main.panel.addToStatusArea(this.uuid, this.menuButton);    

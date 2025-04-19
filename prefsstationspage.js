@@ -139,7 +139,7 @@ export const StationsPageHandler = class StationsPageHandler {
     }
     moveDownChannel(row) {
         let id = row.name;
-        if (this._rows[this._rows.length - 1].name == id) 
+        if (this._rows[this._rows.length - 1].name === id) 
             return;  //This was the last row. Nothing to do
         
         for (let index = 0; index < this._channels.length - 1; ++index) {
@@ -155,7 +155,7 @@ export const StationsPageHandler = class StationsPageHandler {
         
         for (let index = 0; index < this._rows.length - 1; ++index) {
             let curRow = this._rows[index];
-            if (curRow.name == id) {
+            if (curRow.name === id) {
                 this.swapChannels(index, index + 1);
                 break;
             }
@@ -166,7 +166,7 @@ export const StationsPageHandler = class StationsPageHandler {
     moveUpChannel(row) {        
         let id = row.name;
         console.error(`NEW CHANGES. MOVEUP ROW:[${row}] ID:[${id}]`);
-        if (this._rows[0].name == id) 
+        if (this._rows[0].name === id) 
             return;  //This was the first row. Nothing to do
 
         for (let index = 1; index < this._channels.length; ++index) {
@@ -183,7 +183,7 @@ export const StationsPageHandler = class StationsPageHandler {
 
         for (let index = 1; index < this._rows.length; ++index) {
             let curRow = this._rows[index];
-            if (curRow.name == id) {                
+            if (curRow.name === id) {                
                 this.swapChannels(index, index - 1);
                 break;
             }
@@ -204,7 +204,7 @@ export const StationsPageHandler = class StationsPageHandler {
 
     openEditWindow(row) {
         let id = null;
-        if (row != null) id = row.name;
+        if (row !== null) id = row.name;
 
         let channelInfo = null;
         if (id !== null) {

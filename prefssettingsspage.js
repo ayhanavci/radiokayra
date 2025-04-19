@@ -4,7 +4,7 @@ import Gio from "gi://Gio";
 
 import * as Constants from "./constants.js";
 
-import { ExtensionPreferences, gettext as _, } from "resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js";
+import { _ExtensionPreferences, gettext as _, } from "resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js";
 
 export const SettingsPageHandler = class SettingsPageHandler {
     constructor(kayraPrefs) {

@@ -61,7 +61,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this._tooltip?.destroy();
             this._tooltip = null;
 
-            if (this._provider != null) {
+            if (this._provider !== null) {
                 Main.overview.searchController.removeProvider(this._provider);
                 this._provider = null;
             }
@@ -82,7 +82,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             super._init(0.0, "RadiokayraMenuButton");            
             radiokayraPanel = this;
             this._shellVersion = this.getShellversion();
-            console.log("SHELL VERSION:" + this._shellVersion);            
+            //console.log("SHELL VERSION:" + this._shellVersion);            
             this._lastClickedChannelId = "";
             this._kayraExtension = extension;
             this._settings = extension.getSettings();
@@ -90,8 +90,9 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this._activeChannel = null;                        
             
             let volume = this._settings.get_double(Constants.SCHEMA_VOLUME_LEVEL);
+            
             this._player = new RadioKayra.RadioPlayer(volume);
-
+            
             //REFRESH CHANNELS EVENT
             this._settings_changed_handler = this._settings.connect("changed::" + Constants.SCHEMA_CHANNELS_CHANGE_EVENT, () => {
                 console.info(`EXT: ${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNELS_JSON_CHANGED}`);
@@ -110,9 +111,9 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this._tooltip = new St.Label({ style_class: 'song-info-panel-tooltip' });
             this.label_actor = this._tooltip;
             Main.layoutManager.addChrome(this._tooltip);            
-
+            
             this.add_child(this._trayIcon);
-
+            
             this.initRadioCallbacks();
 
             //Controls Section
@@ -135,10 +136,10 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this._tooltip.text = "";
 
             this.hideTooltip();
-            this.connect("enter-event", (widget) => {
+            this.connect("enter-event", (_widget) => {
                 this.showTooltip();
             });
-            this.connect("leave-event", (widget) => {
+            this.connect("leave-event", (_widget) => {
                 this.hideTooltip();
             });
 
@@ -154,7 +155,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this.menu.addMenuItem(this._settingsMenuItem);
             this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
             //Channels Edit Section END
-
+            
             //Channels Section
             this._channelSection = new PopupMenu.PopupMenuSection();
             this._scrollViewMenuSection = new PopupMenu.PopupMenuSection();
@@ -177,7 +178,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this.addChannels();
             
             //If there is no previously played channel, pick the first one on the list (if any)
-            if (this._activeChannel == null && this.channelBoxList != null && this.channelBoxList.length > 0)
+            if (this._activeChannel === null && this.channelBoxList !== null && this.channelBoxList.length > 0)
                 this._activeChannel = this.channelBoxList[0];
 
 
@@ -218,7 +219,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
                 let bSearch = radiokayraPanel._settings.get_boolean(Constants.SCHEMA_GNOME_SEARCH);
                 console.error("GNOME SEARCH:" + bSearch);
                 if (bSearch) {
-                    if (this._provider != null) {
+                    if (this._provider !== null) {
                         Main.overview.searchController.removeProvider(this._provider);                                               
                     }
                     this._provider = new KayraSearchProvider.SearchProvider(extension, this); 
@@ -274,7 +275,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this._player.setOnTagChanged((artist, title) => { this.onPlayerTagChanged(artist, title); });
         }
         onPlayerStreamStarted() {
-            if (radiokayraPanel._activeChannel == null) {
+            if (radiokayraPanel._activeChannel === null) {
                 console.warn("Active Channel is null. This shouldn't happen.")
                 return;
             }
@@ -294,7 +295,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             radiokayraPanel.updateToolTip();
         }
         onChannelChanged(channel) {
-            if (radiokayraPanel._activeChannel == null) console.info(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNEL_CHANGED}:[] -> [${channel._channelInfo.getId()}]`);
+            if (radiokayraPanel._activeChannel === null) console.info(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNEL_CHANGED}:[] -> [${channel._channelInfo.getId()}]`);
             else console.info(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNEL_CHANGED}:[${radiokayraPanel._activeChannel._channelInfo.getId()}] -> [${channel._channelInfo.getId()}]`);
             radiokayraPanel._activeChannel = channel;
             radiokayraPanel._lastClickedChannelId = radiokayraPanel._activeChannel._channelInfo.getId();
@@ -334,15 +335,15 @@ export const RadiokayraMenuButton = GObject.registerClass(
         }
         _navigateChannel(channel) {
             let activeChannel = radiokayraPanel._activeChannel;
-            if (channel == null) {
+            if (channel === null) {
                 console.info(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNEL_NAVIGATE}:[Fail]`);  
                 return; 
             }
-            if (activeChannel == null) {
+            if (activeChannel === null) {
                 console.warn(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNEL_NAVIGATE}:[Active channel not found]`);              
             }                
             else {
-                if (channel._channelInfo.getId() == activeChannel._channelInfo.getId()) { 
+                if (channel._channelInfo.getId() === activeChannel._channelInfo.getId()) { 
                     //Probably just 1 channel in the list. Don't switch.
                     console.warn(`${Constants.LOG_PREFIX_EXTENSION} ${Constants.LOG_INFO_CHANNEL_NAVIGATE}:[ID is the same ${activeChannel._channelInfo.getId()}]`);                              
                     return;
@@ -400,7 +401,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             return null;
         }
         findPrevChannelBox() {          
-            if (radiokayraPanel.channelBoxList.length == 0 || radiokayraPanel._activeChannel == null)
+            if (radiokayraPanel.channelBoxList.length === 0 || radiokayraPanel._activeChannel === null)
                 return null;    
             let activeChannelInfo = radiokayraPanel._activeChannel._channelInfo;
             //console.error(`Active channel order ${activeChannelInfo.getOrder()}`);        
@@ -412,7 +413,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             return radiokayraPanel.channelBoxList[radiokayraPanel.channelBoxList.length - 1];
         }
         findNextChannelBox() {                          
-            if (radiokayraPanel.channelBoxList.length == 0 || radiokayraPanel._activeChannel == null)
+            if (radiokayraPanel.channelBoxList.length === 0 || radiokayraPanel._activeChannel === null)
                 return null;    
             let activeChannelInfo = radiokayraPanel._activeChannel._channelInfo;
             //console.error(`Active channel order ${activeChannelInfo.getOrder()}`);        
@@ -425,7 +426,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             return radiokayraPanel.channelBoxList[0];
         }
         updateToolTip() {
-            if (this._tooltip == null)
+            if (this._tooltip === null)
                 return;            
             let text = "";            
             let artist = radiokayraPanel._streamInfoPopup._artist;
@@ -454,7 +455,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             this._tooltip.text = text;
         }
         showTooltip() {            
-            if (this._tooltip == null || !radiokayraPanel._settings.get_boolean(Constants.SCHEMA_SONG_TOOLTIP))
+            if (this._tooltip === null || !radiokayraPanel._settings.get_boolean(Constants.SCHEMA_SONG_TOOLTIP))
                 return;
             this.updateToolTip();
             this._tooltip.opacity = 0;
@@ -471,7 +472,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             let parent = this._tooltip.get_parent();
             let parentWidth = parent.allocation.x2 - parent.allocation.x1;
 
-            if (Clutter.get_default_text_direction() == Clutter.TextDirection.LTR) {
+            if (Clutter.get_default_text_direction() === Clutter.TextDirection.LTR) {
                 // stop long tooltips falling off the right of the screen
                 x = Math.min(x, parentWidth - tooltipWidth - 6);
                 // but whatever happens don't let them fall of the left
@@ -491,7 +492,7 @@ export const RadiokayraMenuButton = GObject.registerClass(
             });
         }
         hideTooltip() {
-            if (this._tooltip == null)
+            if (this._tooltip === null)
                 return;
             this._tooltip.opacity = 255;
 

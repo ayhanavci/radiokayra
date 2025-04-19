@@ -1,7 +1,7 @@
 {
   "uuid": "radiokayra@dokaton.com",
   "name": "Radio Kayra",
-  "description": "A tray radio extension to listen, search and manage radio stations and Youtube videos. With in-app search a database of 53000 radio stations and youtube. Supports custom streams. IMPORTANT: Requires installation of yt-dlp and GStreamer.",  
+  "description": "A tray radio extension to listen, search and manage radio stations, Youtube videos. In app search a database of 53000 radio stations and youtube. IMPORTANT: Requires installation of yt-dlp and GStreamer.",  
   "shell-version": ["46", "47", "48"],
   "settings-schema": "org.gnome.shell.extensions.radiokayra",
   "url": "https://github.com/ayhanavci/radiokayra",

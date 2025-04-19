@@ -10,15 +10,17 @@ export const RadioPlayer = class RadioPlayer {
     this.ERROR_GSTREAMER = 3;
     this.volume = volume;
     this.source = null;
-    this.initPipeLine();
+    this.initialized = false;
   }
   isSourceReady() { return this.source !== null; }
   initPipeLine() {
     Gst.init(null);
     this.pipeline = new Gst.Pipeline({ name: "Radio Kayra Stream" });
     this.playing = false;
+    this.initialized = true;
   }
   changeChannel(uri) {
+    if (!this.initialized) this.initPipeLine();
     if (this.source !== null) this.pipeline.remove(this.source);
     this.source = Gst.ElementFactory.make("playbin3", "source");    
     this.source.set_property("uri", uri);
@@ -29,6 +31,7 @@ export const RadioPlayer = class RadioPlayer {
     this.source.set_property("flags", 0x00000080 | 0x00000010 | 0x00000002); //https://gstreamer.freedesktop.org/documentation/playback/playsink.html?gi-language=javascript#GstPlayFlags
   }
   play() {
+    if (!this.initialized) this.initPipeLine();
     this.pipeline.set_state(Gst.State.PLAYING);
     this.playing = true;
   }
