@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-07 14:09+0300\n"
+"PO-Revision-Date: 2025-06-05 14:02+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: kayramenu.js:147 prefssettingsspage.js:22
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: popstreaminfo.js:175
+msgid "Loading..."
+msgstr "Laden …"
+
+#: popstreaminfo.js:185
+msgid "Ready..."
+msgstr "Bereit …"
+
+#: prefsaboutspage.js:20
+msgid "About"
+msgstr "Info"
+
+#: prefsaboutspage.js:26
+msgid ""
+"Radio Kayra v2.0\n"
+"A foss hobby project by Ayhan Avcı (2024-2025)"
+msgstr ""
+"Radio Kayra v2.0\n"
+"Ein FOSS-Hobby-Projekt von Ayhan Avcı (2024–2025)"
+
+#: prefsaboutspage.js:26
+msgid ""
+"Mid clicking the radio icon toggles play / stop.\n"
+"Don't forget to install yt-dlp &amp; gstreamer. Links at the bottom. Enjoy!"
+msgstr ""
+"Ein Mittelklick auf das Radiosymbol startet/stoppt die Wiedergabe.\n"
+"Nicht vergessen, yt-dlp und gstreamer zu installieren. Verweise unten. Viel Spaß!"
+
+#: prefsaboutspage.js:29
+msgid "Links"
+msgstr "Verweise"
+
+#: prefsaboutspage.js:32
+msgid "Project"
+msgstr "Projekt"
+
+#: prefsaboutspage.js:43
+msgid "Extension"
+msgstr "Erweiterung"
+
+#: prefsaboutspage.js:54
+msgid "Yt-dlp"
+msgstr "yt-dlp"
+
+#: prefsaboutspage.js:65
+msgid "GStreamer"
+msgstr "GStreamer"
+
+#: prefssearchradio.js:26
+msgid "Radio"
+msgstr "Radio"
+
+#: prefssearchradio.js:31 prefssearchradio.js:41 prefssearchyoutube.js:26
+#: prefssearchyoutube.js:36
+msgid "Search"
+msgstr "Suchen"
+
+#: prefssearchradio.js:35
+msgid "Channel name"
+msgstr "Sendername"
+
+#: prefssearchradio.js:65 prefssearchyoutube.js:62
+msgid "Search Results"
+msgstr "Suchergebnisse"
+
+#: prefssearchradio.js:127
+msgid "Country: "
+msgstr "Land: "
+
+#: prefssearchradio.js:128
+msgid "Tags: "
+msgstr "Schlüsselwörter: "
+
+#: prefssearchradio.js:129 prefssearchyoutube.js:93
+msgid "Link: "
+msgstr "Verweis: "
+
+#: prefssearchradio.js:130
+msgid "Codec: "
+msgstr "Codec: "
+
+#: prefssearchradio.js:131
+msgid "Bitrate: "
+msgstr "Bitrate: "
+
+#: prefssearchyoutube.js:21
+msgid "Youtube"
+msgstr "Youtube"
+
+#: prefssearchyoutube.js:30
+msgid "Video name"
+msgstr "Videoname"
+
+#: prefssearchyoutube.js:92
+msgid "Likes: "
+msgstr "Likes: "
+
+#: prefssearchyoutube.js:94
+msgid "Is Live: "
+msgstr "Is Live: "
+
+#: prefssearchyoutube.js:95
+msgid "Duration: "
+msgstr "Dauer: "
+
+#: prefssettingsspage.js:33
+msgid "Show hover tooltip"
+msgstr "Hinweise bei Überstreichen anzeigen"
+
+#: prefssettingsspage.js:34
+msgid "Shows the song, artist, station info when you hover on the radio icon"
+msgstr "Titel, Künstler und Senderinformationen anzeigen, wenn sich der Mauszeiger auf dem Radiosymbol befindet."
+
+#: prefssettingsspage.js:42
+msgid "Right click - Settings"
+msgstr "Sekundärklick – Einstellungen"
+
+#: prefssettingsspage.js:43
+msgid "Opens the settings(this) window when you right click on the radio icon."
+msgstr "Bei Sekundärklick des Radiosymbols (dieses) Einstellungsfenster öffnen."
+
+#: prefssettingsspage.js:51
+msgid "Right click - Copy Song"
+msgstr "Sekundärklick – Titel kopieren"
+
+#: prefssettingsspage.js:52
+msgid "Copies the song title to clipboard when you right click on the radio icon."
+msgstr "Bei Sekundärklick des Radiosymbols Titel in die Zwischenablage kopieren."
+
+#: prefssettingsspage.js:59
+msgid "Panel Height"
+msgstr "Höhe des Bereichs"
+
+#: prefssettingsspage.js:60
+msgid "The height of the extension window when opened."
+msgstr "Höhe des Erweiterungsfensters"
+
+#: prefssettingsspage.js:69
+msgid "Gnome Search Support"
+msgstr "Unterstützung der Gnome-Anwendungssuche"
+
+#: prefssettingsspage.js:70
+msgid "Search and play your stations using Gnome search."
+msgstr "Sender suchen und wiedergeben mittels der Gnome-Suchfunktion."
+
+#: prefsstationspage.js:24
+msgid "Stations"
+msgstr "Sender"
+
+#: prefsstationspage.js:25
+msgid "Add / Edit and Delete radio stations."
+msgstr "Radiosender hinzufügen, bearbeiten und löschen"
+
+#: prefsstationspage.js:33
+msgid "Radio Channels"
+msgstr "Radiosender"
+
+#: prefsstationspage.js:178
+msgid "Add a New Channel"
+msgstr "Sender hinzufügen"
+
+#: prefsstationspage.js:178
+msgid "Edit Channel"
+msgstr "Sender bearbeiten"
+
+#: prefsstationspage.js:196
+msgid "Channel URL:"
+msgstr "Senderadresse:"
+
+#: prefsstationspage.js:220
+msgid "Channel Name:"
+msgstr "Sendername:"
+
+#: prefsstationspage.js:230
+msgid "Fetch from url"
+msgstr "Der Adresse entnehmen"
+
+#: prefsstationspage.js:252
+msgid "Use yt-dlp?"
+msgstr "yt-dlp verwenden?"
+
+#: prefsstationspage.js:255
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: prefsstationspage.js:255
+msgid "Update"
+msgstr "Aktualisieren"
